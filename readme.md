@@ -1,23 +1,42 @@
-# react-native-custom-component [![Travis Build Status](https://img.shields.io/travis/brh55/react-native-custom-component.svg?style=flat-square)](https://travis-ci.org/brh55/react-native-custom-component) [![David](https://img.shields.io/david/dev/brh55/react-native-custom-component.svg?style=flat-square)](https://david-dm.org/brh55/react-native-custom-component?type=dev) [![npm](https://img.shields.io/npm/dt/react-native-custom-component.svg?style=flat-square)](https://www.npmjs.com/package/react-native-custom-component)
+# react-native-injectable-component [![Travis Build Status](https://img.shields.io/travis/brh55/react-native-injectable-component.svg?style=flat-square)](https://travis-ci.org/brh55/react-native-injectable-component) [![David](https://img.shields.io/david/dev/brh55/react-native-injectable-component.svg?style=flat-square)](https://david-dm.org/brh55/react-native-injectable-component?type=dev) [![npm](https://img.shields.io/npm/dt/react-native-injectable-component.svg?style=flat-square)](https://www.npmjs.com/package/react-native-injectable-component)
 
-> My awesome component does a lot of cool stuff!
+> 🛠 A react-native component that allows a external component to be injected during runtime with fallback to a default component
+
+### Why
+
+This mainly rised from the issue of developing open-source components, where vast users have different preferred components. The result is the typical "rubber duck" problem, different implementations but is essentially a duck 🦆 at it's core. 
+
+Thus, this component is essentially a high-order component with a [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern) in mind. Therefore, as long as the injected *(passed)* component implements the same core interface, things will render visually and we can pass along particular props for added flexibility.
+
+### When
+Use `react-native-injectable-component` for building components where there is a strong indication where you suspect the component maybe replaced in the future. In addition, where you want to give users greater flexibility without having to touch the core code of your components.
 
 ## Install
 ```bash
-$ npm install react-native-custom-component --save
+$ npm install react-native-injectable-component --save
 ```
 
 ## Usage
-1. Add an import to the top of yur file
+1. Add an import to the top of your file
     ```js
-    import CustomComponent from 'react-native-custom-component';
+    import Injectable from 'react-native-injectable-component';
     ```
 2. Declare the component in the render method of your component
     ```jsx
+    const imageProps = {
+        source: {
+            uri: "https://test.com/image1.jpeg"
+        },
+        resizeMode: "contain"
+    };
+    
     render() {
         return (
-            <CustomComponent
-              hello={'Hello world!'}
+            <Injectable
+              defaultComponent={Image}
+              defaultProps={imageProps}
+              injector={props.customComponent}
+              injectorProps={props.customComponetProps}
              />
         )
     }
@@ -31,14 +50,3 @@ $ npm install react-native-custom-component --save
 
 ## License
 MIT © [Brandon Him](https://github.com/brh55/react-native-custom-component)
-
----
-# Generator Notes
-👋🏽 Hello and thanks for using, [`generator-rnc`](https://github.com/brh55/generator-rnc)! <br>
-Please feel free to report [bugs](https://github.com/brh55/generator-rnc/issues) or contribute useful features to the generator to help others.
-
-Also, don't forget to include example an application for users to test out and use your component.
-
-1. `react-native init example`
-
-> 🗒 P.S: Don't forget to delete this note :)
