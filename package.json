@@ -1,0 +1,53 @@
+{
+	"name": "react-native-custom-component",
+	"version": "0.1.0",
+	"description": "My awesome component does a lot of cool stuff!",
+	"repository": "https://github.com/brh55/react-native-custom-component.git",
+	"homepage": "https://github.com/brh55/react-native-custom-component#readme",
+	"license": "MIT",
+	"author": {
+		"name": "Brandon Him",
+		"email": "brh55@drexel.edu",
+		"url": "github.com/brh55/react-native-component-inject"
+	},
+	"directories": {
+		"example": "example"
+	},
+	"bugs": {
+		"url": "https://github.com/brh55/react-native-custom-component/issues"
+	},
+	"scripts": {
+		"test": "jest",
+		"renew-snap": "jest --updateSnapshot",
+		"clean-test": "jest --no-cache"
+	},
+	"files": [
+		"components/"
+		"index.js"
+	],
+	"keywords": [
+		"react-native",
+		"react-native component"
+	],
+	"peerDependencies": {
+		"react": "*",
+		"react-native": "*",
+		"prop-types": "*"
+	},
+	"devDependencies": {
+		"babel-jest": "^20.0.3",
+		"babel-preset-react-native": "^2.1.0",
+		"jest": "^20.0.4",
+		"jest-react-native": "^18.0.0",
+		"react": "16.0.0-alpha.12",
+		"react-native": "^0.46.4",
+		"react-test-renderer": "^16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native",
+		"modulePathIgnorePatterns": [
+			"<rootDir>/example/",
+			"<rootDir>/__tests__/mocks/"
+		]
+	}
+}
