@@ -1,14 +1,17 @@
-# react-native-injectable-component [![Travis Build Status](https://img.shields.io/travis/brh55/react-native-injectable-component.svg?style=flat-square)](https://travis-ci.org/brh55/react-native-injectable-component) [![David](https://img.shields.io/david/dev/brh55/react-native-injectable-component.svg?style=flat-square)](https://david-dm.org/brh55/react-native-injectable-component?type=dev) [![npm](https://img.shields.io/npm/dt/react-native-injectable-component.svg?style=flat-square)](https://www.npmjs.com/package/react-native-injectable-component)
+# react-native-injectable-component
+[![Travis Build Status](https://img.shields.io/travis/brh55/react-native-injectable-component.svg?style=flat-square)](https://travis-ci.org/brh55/react-native-injectable-component) [![David](https://img.shields.io/david/dev/brh55/react-native-injectable-component.svg?style=flat-square)](https://david-dm.org/brh55/react-native-injectable-component?type=dev) [![npm](https://img.shields.io/npm/dt/react-native-injectable-component.svg?style=flat-square)](https://www.npmjs.com/package/react-native-injectable-component)
 
-> 🛠 A react-native component that allows a external component to be injected during runtime with fallback to a default component
+> 🛠 A "injectable" react-native component that allows an external component to be injected during run-time with fallback to a default component
 
-### Why
+##### What
+The core of `react-native-injectable-component` is rather small and simple. It's sole purpose is to simplify the need of passing along an external component to override the default internal component.
 
+##### Why
 This mainly rised from the issue of developing open-source components, where vast users have different preferred components. The result is the typical "rubber duck" problem, different implementations but is essentially a duck 🦆 at it's core. 
 
-Thus, this component is essentially a high-order component with a [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern) in mind. Therefore, as long as the injected *(passed)* component implements the same core interface, things will render visually and we can pass along particular props for added flexibility.
+Thus, this component is essentially a high-order component with a [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern) in mind. Therefore, as long as the injected *(passed)* component implements the same core interface, things will render visually identical and we can pass along particular props for added flexibility. 
 
-### When
+##### When
 Use `react-native-injectable-component` for building components where there is a strong indication where you suspect the component maybe replaced in the future. In addition, where you want to give users greater flexibility without having to touch the core code of your components.
 
 ## Install
