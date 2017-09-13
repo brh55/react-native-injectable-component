@@ -7,12 +7,12 @@
 The core of `react-native-injectable-component` is rather small and simple. It's sole purpose is to simplify the need of passing along an external component to override the default internal component.
 
 ##### Why
-This mainly rised from the issue of developing open-source components, where vast users have different preferred components. The result is the typical "rubber duck" problem, different implementations but is essentially a duck 🦆 at it's core. 
+This rised mainly from the issue of developing open-source components, where vast users have different preferred components. The result is the typical "duck" problem -- numerous types and variations available, but they are simply ducks 🦆🦆🦆.
 
-Thus, this component is essentially a high-order component with a [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern) in mind. Therefore, as long as the injected *(passed)* component implements the same core interface, things will render visually identical and we can pass along particular props for added flexibility. 
+Thus, this component is essentially a high-order component with a [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern) in mind. Therefore, as long as the injected component *(injectant)* implements the same core interface, things will render visually identical. On top of that, we can pass along particular props for added flexibility. 
 
 ##### When
-Use `react-native-injectable-component` for building components where there is a strong indication where you suspect the component maybe replaced in the future. In addition, where you want to give users greater flexibility without having to touch the core code of your components.
+Use `react-native-injectable-component` for building components where there is a strong indication where you suspect the component may be replaced in the future. In addition, where you want to give users greater flexibility without having to touch the core code of your components.
 
 ## Install
 ```bash
