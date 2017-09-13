@@ -56,5 +56,8 @@ $ npm install react-native-injectable-component --save
 | injectant        | `func` - `react component` | A component that will override the defaultComponent for rendering. Note: this component should abide by a same core interface. |
 | injectantProps   | `object`                   | Props that will assign over defaultProps and be applied to the injectant rendering.                                            |
 
+## Contribute
+While the core of this module is small, feel free to submit issues or provide suggestions on improving usability.
+
 ## License
 MIT © [Brandon Him](https://github.com/brh55/react-native-injectable-component)
