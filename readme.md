@@ -1,7 +1,7 @@
 # react-native-injectable-component
 [![Travis Build Status](https://img.shields.io/travis/brh55/react-native-injectable-component.svg?style=flat-square)](https://travis-ci.org/brh55/react-native-injectable-component) [![David](https://img.shields.io/david/dev/brh55/react-native-injectable-component.svg?style=flat-square)](https://david-dm.org/brh55/react-native-injectable-component?type=dev) [![npm](https://img.shields.io/npm/dt/react-native-injectable-component.svg?style=flat-square)](https://www.npmjs.com/package/react-native-injectable-component)
 
-> 🛠 A "injectable" react-native component that allows an external component to be injected during run-time with fallback to a default component
+> 💉 A "injectable" react-native component that allows an external component to be injected during run-time while fallbacking to a default component
 
 ##### What
 The core of `react-native-injectable-component` is rather small and simple. It's sole purpose is to simplify the need of passing along an external component to override the default internal component.
@@ -22,34 +22,39 @@ $ npm install react-native-injectable-component --save
 ## Usage
 1. Add an import to the top of your file
     ```js
-    import Injectable from 'react-native-injectable-component';
+    import Injector from 'react-native-injectable-component';
     ```
-2. Declare the component in the render method of your component
+2. Declare a defaultComponent for the `Injector`, and include a way to dynamic pass along an optional `Injectant` component and properties. This will allow a component to overload default implementation, and add extra props if needed.
     ```jsx
-    const imageProps = {
-        source: {
-            uri: "https://test.com/image1.jpeg"
-        },
-        resizeMode: "contain"
-    };
-    
-    render() {
-        return (
-            <Injector
-              defaultComponent={Image}
-              defaultProps={imageProps}
-              injectant={props.customComponent}
-              injectantProps={props.customComponetProps}
-             />
-        )
+    const myComponent = (props) => {
+        const imageProps = {
+            source: {
+                uri: "https://test.com/image1.jpeg"
+            },
+            resizeMode: "contain"
+        };
+        
+        render() {
+            return (
+                <Injector
+                   defaultComponent={Image}
+                   defaultProps={imageProps}
+                   injectant={props.customComponent}
+                   injectantProps={props.customComponentProps}
+                />
+            )
+        }
     }
     ```
-3. Take a look at the [example app](/tree/master/example).
+3. Now `myComponent` will render `Image` by default, but users can now have the ability to use their own third-party `Image` component if needed.
 
 ## Component Props
-| Property | Type     | Description             | Example     |
-|----------|----------|-------------------------|-------------|
-| hello    | `string` | The hello world message | `Hello 🦄!` |
+| Property         | Type                       | Description                                                                                                                    |
+|------------------|----------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| defaultComponent | `func` - `react component` | A default component to be used unless a injectant is specified                                                                 |
+| defaultProps     | `object`                   | Default properties that are applied in both components                                                                         |
+| injectant        | `func` - `react component` | A component that will override the defaultComponent for rendering. Note: this component should abide by a same core interface. |
+| injectantProps   | `object`                   | Props that will assign over defaultProps and be applied to the injectant rendering.                                            |
 
 ## License
-MIT © [Brandon Him](https://github.com/brh55/react-native-custom-component)
+MIT © [Brandon Him](https://github.com/brh55/react-native-injectable-component)
