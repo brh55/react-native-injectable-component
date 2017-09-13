@@ -35,11 +35,11 @@ $ npm install react-native-injectable-component --save
     
     render() {
         return (
-            <Injectable
+            <Injector
               defaultComponent={Image}
               defaultProps={imageProps}
-              injector={props.customComponent}
-              injectorProps={props.customComponetProps}
+              injectant={props.customComponent}
+              injectantProps={props.customComponetProps}
              />
         )
     }
