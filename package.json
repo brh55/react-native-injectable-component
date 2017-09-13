@@ -1,7 +1,7 @@
 {
   "name": "react-native-injectable-component",
   "version": "0.1.0",
-  "description": "A react-native component that allows a external component to be injected during runtime with fallback to a default component",
+  "description": "A 'injectable' react-native component that allows an external component to be injected during run-time while fallbacking to a default component",
   "repository": "https://github.com/brh55/react-native-injectable-component.git",
   "homepage": "https://github.com/brh55/react-native-injectable-component#readme",
   "license": "MIT",
@@ -25,7 +25,10 @@
   ],
   "keywords": [
     "react-native",
-    "react-native component"
+    "react-native component",
+    "strategy pattern",
+    "dependency injection",
+    "flexible react-native"
   ],
   "peerDependencies": {
     "react": "*",
