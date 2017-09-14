@@ -5,6 +5,7 @@
   "repository": "https://github.com/brh55/react-native-injectable-component.git",
   "homepage": "https://github.com/brh55/react-native-injectable-component#readme",
   "license": "MIT",
+  "main": "components/Injector.js",
   "author": {
     "name": "Brandon Him",
     "url": "github.com/brh55/react-native-injectable-component"
