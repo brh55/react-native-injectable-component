@@ -1,6 +1,6 @@
 {
   "name": "react-native-injectable-component",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A 'injectable' react-native component that allows an external component to be injected during run-time while fallbacking to a default component",
   "repository": "https://github.com/brh55/react-native-injectable-component.git",
   "homepage": "https://github.com/brh55/react-native-injectable-component#readme",
