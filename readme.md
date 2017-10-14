@@ -56,8 +56,8 @@ $ npm install react-native-injectable-component --save
 | injectant        | `func` - `react component` | A component that will override the defaultComponent for rendering. Note: this component should abide by a same core interface. |
 | injectantProps   | `object`                   | Props that will assign over defaultProps and be applied to the injectant rendering.                                            |
 
-## Repositories Using `react-native-inectable-component`
-Live examples where this component is being used in production:
+## Examples
+These are example repositories / components that are currently using react-native-injectable-component.
 
 - [`react-native-masonry`](https://github.com/brh55/react-native-masonry) - A component that handles masonry~ish layouts
 
