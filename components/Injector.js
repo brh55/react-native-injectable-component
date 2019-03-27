@@ -32,7 +32,7 @@ const Injector = (props) => {
 }
 
 Injector.propTypes = {
-	defaultComponent: PropTypes.func,
+	defaultComponent: PropTypes.elementType,
 	defaultProps: PropTypes.object,
 	injectant: PropTypes.func,
 	injectantProps: PropTypes.object
